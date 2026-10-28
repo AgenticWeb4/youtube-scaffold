@@ -1,3 +1,5 @@
+参考并改写自 [Zara Zhang](https://github.com/zarazhangrui) 的 [YouTube Digest](https://github.com/zarazhangrui/youtube-digest)，保留原作者的 [MIT许可](https://github.com/AgenticWeb4/youtube-scaffold/blob/main/LICENSE)。第三方依赖及随包许可证见 [NOTICE](https://github.com/AgenticWeb4/youtube-scaffold/blob/main/NOTICE)。
+
 # YouTube Scaffold
 
 在YouTube视频旁阅读字幕、查看双语译文、理解重点，并保存可回到来源的笔记和单词。
@@ -8,20 +10,32 @@
 - 再次遇见收藏词时高亮，回到来源重听。
 - 导出字幕TXT，以及包含概览、字幕与笔记的Markdown。
 
-![转写侧栏](assets/screenshots/youtube-transcript.png)
+## 用看过的视频记单词
 
-![单词本](assets/screenshots/youtube-vocabulary.png)
+比如，你在编程教程里遇到 approach（方法），又在一段访谈里听到这个词。把两次遇见都收藏后，单词本会把它们放在一起，保留原句、中文译文和视频位置。复习时点一下，就能回到当时的视频，再听一遍这个词是怎么用的。
+
+![转写阅读与单词本功能概览](assets/screenshots/product-overview.png)
+
+*界面节选合成，已对无关画面作模糊处理。*
 
 ## 安装
 
-需要Chrome 116或更新版本、Node.js 22或更新版本，以及项目指定版本的pnpm。
+需要Chrome 116或更新版本。
+
+1. 从 [最新 Release](https://github.com/AgenticWeb4/youtube-scaffold/releases/latest) 下载扩展ZIP并解压到固定目录。
+2. 打开 `chrome://extensions`，启用开发者模式。
+3. 选择“加载已解压的扩展程序”，打开解压后包含 `manifest.json` 的目录。
+
+更新后重新加载扩展并刷新YouTube；保留原加载目录可继续使用已有设置和收藏。
+
+从源码构建时，需要Node.js 22或更新版本及项目指定版本的pnpm：
 
 ```sh
 pnpm install --frozen-lockfile
 pnpm run build
 ```
 
-在 `chrome://extensions` 启用开发者模式，选择“加载已解压的扩展程序”，打开 `dist/extension/`。更新后重新加载扩展并刷新YouTube；保留原加载目录可继续使用已有设置和收藏。
+构建后，在Chrome加载 `dist/extension/`。
 
 ## 开始使用
 
@@ -46,6 +60,4 @@ pnpm run package
 
 安装包生成在 `dist/`；构建产物与本地数据不提交到Git。
 
-## 许可与来源
-
-参考并改写自 [Zara Zhang](https://github.com/zarazhangrui) 的 [YouTube Digest](https://github.com/zarazhangrui/youtube-digest)，保留原作者的 [MIT许可](LICENSE)。第三方依赖及随包许可证见 [NOTICE](NOTICE)。
+推送代码或提交PR时，GitHub Actions会自动测试、构建并提供安装包。推送与项目版本一致的 `vX.Y.Z` 标签后，会自动发布到 Releases；也可在 Actions 页面手动运行构建。

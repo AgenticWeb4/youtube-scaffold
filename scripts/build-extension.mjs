@@ -38,10 +38,11 @@ for (const name of ["LICENSE", "NOTICE", "PRIVACY.md"]) {
 }
 await fs.writeFile(
   path.join(output, "README.md"),
-  `# YouTube Scaffold ${version}
+  `参考并改写自 [Zara Zhang](https://github.com/zarazhangrui) 的 [YouTube Digest](https://github.com/zarazhangrui/youtube-digest)，保留原作者的 [MIT许可](LICENSE)。第三方依赖及随包许可证见 [NOTICE](NOTICE)。
+
+# YouTube Scaffold ${version}
 
 在视频旁阅读双语转写、查看概览、保存笔记和带来源的单词。
-参考并改写自 Zara Zhang 的 YouTube Digest：https://github.com/zarazhangrui/youtube-digest。
 
 ## 安装与使用
 
