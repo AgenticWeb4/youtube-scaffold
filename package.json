@@ -8,7 +8,9 @@
     "build": "tsc -b && node scripts/build-extension.mjs",
     "typecheck": "tsc -b",
     "test": "pnpm run build && node --test tests/unit/*.test.mjs tests/integration/*.test.mjs",
-    "check": "pnpm run test && node scripts/check-architecture.mjs && node scripts/check-release.mjs",
+    "specs:check": "node scripts/check-specs.mjs",
+    "specs:map": "node scripts/check-specs.mjs --write-map",
+    "check": "pnpm run specs:check && pnpm run test && node scripts/check-architecture.mjs && node scripts/check-release.mjs",
     "package": "pnpm run check && node scripts/package-extension.mjs",
     "preview": "node scripts/preview.mjs"
   },

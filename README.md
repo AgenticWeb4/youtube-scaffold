@@ -60,4 +60,6 @@ pnpm run package
 
 安装包生成在 `dist/`；构建产物与本地数据不提交到Git。
 
+概念契约与同步规格随源码维护：从 [架构与规格导航](ARCHITECTURE.md) 进入各模块的 `CONCEPT.md` 及协调层的 `SYNCS.md`。`pnpm run check` 会检查规格覆盖、引用与派生地图；更新规格后运行 `pnpm run specs:map` 重建导航。行为变更应在同一次提交中更新对应规格、实现及必要测试。
+
 推送代码或提交PR时，GitHub Actions会自动测试、构建并提供安装包。推送与项目版本一致的 `vX.Y.Z` 标签后，会自动发布到 Releases；也可在 Actions 页面手动运行构建。
