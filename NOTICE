@@ -1,0 +1,9 @@
+YouTube Scaffold
+
+Based on YouTube Digest by Zara Zhang:
+https://github.com/zarazhangrui/youtube-digest
+The original MIT copyright and permission notice are retained in LICENSE.
+
+Bundled dependencies retain their own licenses:
+- Lucide 1.62.0: ISC and included attribution; see LUCIDE-LICENSE in the extension package.
+- Dexie 4.4.7: Apache-2.0; see DEXIE-LICENSE in the extension package.

@@ -1,0 +1,41 @@
+{
+  "files": [],
+  "references": [
+    {
+      "path": "src/modules/shared"
+    },
+    {
+      "path": "src/modules/infrastructure"
+    },
+    {
+      "path": "src/features/reading"
+    },
+    {
+      "path": "src/features/translation"
+    },
+    {
+      "path": "src/features/explanation"
+    },
+    {
+      "path": "src/features/summary"
+    },
+    {
+      "path": "src/features/collection"
+    },
+    {
+      "path": "src/features/export"
+    },
+    {
+      "path": "src/features/vocabulary"
+    },
+    {
+      "path": "src/modules/syncs"
+    },
+    {
+      "path": "src/modules/gateway"
+    },
+    {
+      "path": "src/apps/extension"
+    }
+  ]
+}

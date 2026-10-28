@@ -1,0 +1,45 @@
+{
+  "extends": "../../../tsconfig.base.json",
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "dist"
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "references": [
+    {
+      "path": "../../modules/shared"
+    },
+    {
+      "path": "../../modules/infrastructure"
+    },
+    {
+      "path": "../../features/reading"
+    },
+    {
+      "path": "../../features/translation"
+    },
+    {
+      "path": "../../features/explanation"
+    },
+    {
+      "path": "../../features/summary"
+    },
+    {
+      "path": "../../features/collection"
+    },
+    {
+      "path": "../../features/export"
+    },
+    {
+      "path": "../../modules/syncs"
+    },
+    {
+      "path": "../../modules/gateway"
+    },
+    {
+      "path": "../../features/vocabulary"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+/* Lucide supplies every action glyph; this file only controls presentation. */
+.ys-icon-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  width: 34px;
+  min-width: 34px;
+  height: 34px;
+  padding: 7px;
+  flex-shrink: 0;
+}
+.ys-icon-button .ys-icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+.ys-icon-button:focus-visible {
+  outline: 2px solid var(--accent, #c8674f);
+  outline-offset: 3px;
+}
+.tabs .ys-icon-button {
+  flex: 1;
+  height: 40px;
+}
+.note-actions .ys-icon-button,
+.quote-actions .ys-icon-button {
+  width: 30px;
+  min-width: 30px;
+  height: 30px;
+}
+.transcript-search-icon {
+  display: inline-flex;
+  align-items: center;
+}
+.transcript-search-icon .ys-icon {
+  width: 16px;
+  height: 16px;
+}
+.ys-icon-busy .ys-icon {
+  animation: ys-icon-spin 1s linear infinite;
+}
+@keyframes ys-icon-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ys-icon-busy .ys-icon {
+    animation: none;
+  }
+}
+
+/* Author display rules must not override semantic hidden controls. */
+.ys-icon-button[hidden] {
+  display: none !important;
+}

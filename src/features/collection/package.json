@@ -1,0 +1,23 @@
+{
+  "name": "@ys/collection",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./presentation": {
+      "types": "./dist/presentation/index.d.ts",
+      "import": "./dist/presentation/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -b",
+    "test": "node ../../../scripts/module-test.mjs collection"
+  },
+  "dependencies": {
+    "@ys/shared": "workspace:*"
+  }
+}

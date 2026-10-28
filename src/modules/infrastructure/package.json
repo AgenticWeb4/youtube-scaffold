@@ -1,0 +1,19 @@
+{
+  "name": "@ys/infrastructure",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -b",
+    "test": "node ../../../scripts/module-test.mjs infrastructure"
+  },
+  "dependencies": {
+    "@ys/shared": "workspace:*"
+  }
+}

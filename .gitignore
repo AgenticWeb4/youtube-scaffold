@@ -1,0 +1,9 @@
+node_modules/
+dist/
+**/dist/
+*.tsbuildinfo
+artifacts/
+.DS_Store
+.env
+.env.*
+config.js
